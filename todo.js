@@ -17,7 +17,6 @@ class TodoList {
         }
     }
 
-    // hoge
     removeTodo(index) {
         if (index >= 0 && index < this.todos.length) {
             const removedTask = this.todos.splice(index, 1)[0];
@@ -37,6 +36,12 @@ class TodoList {
                 console.log(`${index}: ${status} ${todo.task}`);
             });
         }
+    }
+
+    allDelete() {
+      if(this.todos.length === 0) return;
+			this.todos = [];
+			console.log('TODOを全て削除しました。');
     }
 }
 
